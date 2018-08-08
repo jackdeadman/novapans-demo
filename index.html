@@ -8,33 +8,58 @@
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <div class="hang-drum-container">
-    <label for="hang-drum">9 Note in D Minor</label>
-    <ul class="hang-drum hang-drum--blue" data-starting-angle="225">
-      <li class="hang-drum__note" data-note="D3">D3</li>
-      <li class="hang-drum__note" data-note="A4">A4</li>
-      <li class="hang-drum__note" data-note="D5">D5</li>
-      <li class="hang-drum__note" data-note="C5">C5</li>
-      <li class="hang-drum__note" data-note="G4">G4</li>
-      <li class="hang-drum__note" data-note="D4">D4</li>
-      <li class="hang-drum__note" data-note="A3">A3</li>
-      <li class="hang-drum__note" data-note="C3">C3</li>
-      <li class="hang-drum__note" data-note="F4">F4</li>
-    </ul>
-  </div>
+  <div class="drums">
+    <div class="hang-drum-container hang-drum-container--blue">
+      <label for="hang-drum">9 Note in D Minor</label>
+      <ul class="hang-drum hang-drum--blue"
+            data-file-location="audio/9"
+            data-starting-angle="225"
+            data-extension="mp3">
+        <li class="hang-drum__note" data-note="D3">D3</li>
+        <li class="hang-drum__note" data-note="A4">A4</li>
+        <li class="hang-drum__note" data-note="D5">D5</li>
+        <li class="hang-drum__note" data-note="C5">C5</li>
+        <li class="hang-drum__note" data-note="G4">G4</li>
+        <li class="hang-drum__note" data-note="D4">D4</li>
+        <li class="hang-drum__note" data-note="A3">A3</li>
+        <li class="hang-drum__note" data-note="C3">C3</li>
+        <li class="hang-drum__note" data-note="F4">F4</li>
+      </ul>
+    </div>
 
-  <!-- <div class="hang-drum-container">
-    <label for="hang-drum">7 Note in D Minor</label>
-    <ul class="hang-drum" data-starting-angle="240">
-      <li class="hang-drum__note" data-note="D3">G3</li>
-      <li class="hang-drum__note" data-note="D3">Ab4</li>
-      <li class="hang-drum__note" data-note="A4">G4</li>
-      <li class="hang-drum__note" data-note="D5">E4</li>
-      <li class="hang-drum__note" data-note="C5">C4</li>
-      <li class="hang-drum__note" data-note="G4">Db4</li>
-      <li class="hang-drum__note" data-note="D4">F4</li>
-    </ul>
-  </div> -->
+    <div class="hang-drum-container hang-drum-container--yellow">
+      <label for="hang-drum">7 Note in G Minor</label>
+      <ul class="hang-drum hang-drum--yellow"
+            data-file-location="audio/7"
+            data-starting-angle="240"
+            data-extension="mp3">
+        <li class="hang-drum__note" data-note="D3">G3</li>
+        <li class="hang-drum__note" data-note="D3">Ab4</li>
+        <li class="hang-drum__note" data-note="A4">G4</li>
+        <li class="hang-drum__note" data-note="D5">E4</li>
+        <li class="hang-drum__note" data-note="C5">C4</li>
+        <li class="hang-drum__note" data-note="G4">Db4</li>
+        <li class="hang-drum__note" data-note="D4">F4</li>
+      </ul>
+    </div>
+
+    <div class="hang-drum-container hang-drum-container--orange">
+      <label for="hang-drum">8 Note in F Minor</label>
+      <ul class="hang-drum hang-drum--orange"
+            data-file-location="audio/8"
+            data-starting-angle="240"
+            data-extension="mp3">
+        <li class="hang-drum__note" data-note="D3">G3</li>
+        <li class="hang-drum__note" data-note="D3">Ab4</li>
+        <li class="hang-drum__note" data-note="A4">G4</li>
+        <li class="hang-drum__note" data-note="D5">E4</li>
+        <li class="hang-drum__note" data-note="C5">C4</li>
+        <li class="hang-drum__note" data-note="G4">Db4</li>
+        <li class="hang-drum__note" data-note="D4">F4</li>
+        <li class="hang-drum__note" data-note="D4">F4</li>
+      </ul>
+    </div>
+  </div>
 
   <script src="main.js"></script>
 </body>

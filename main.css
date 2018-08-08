@@ -2,7 +2,28 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
+
+
+
+.hang-drum-container {
+  background-color: pink;
+  padding: 40px 0;
+}
+
+.hang-drum-container--blue {
+  background-color: #e8e8f5;
+}
+
+.hang-drum-container--yellow {
+  background-color: #f3f3e5;
+}
+
+.hang-drum-container--orange {
+  background-color: #f9e9cc;
+}
+
 
 .hang-drum {
   margin: 0 auto;
@@ -13,16 +34,19 @@ body {
   height: 300px;
   border-radius: 50%;
   position: relative;
+  box-shadow: 0 0 10px 5px #ccc;
 }
 
 .hang-drum--blue {
-  box-shadow: 0 0 10px #ddd;
   background:radial-gradient(ellipse at center, #00afe8 0%, #2e7086 100%);
 }
 
 .hang-drum--yellow {
-  box-shadow: 0 0 10px #ddd;
-  background:radial-gradient(ellipse at center, #00afe8 0%, #2e7086 100%);
+  background:radial-gradient(ellipse at center, #fcff00 0%, #a6b12c 100%);
+}
+
+.hang-drum--orange {
+  background:radial-gradient(ellipse at center, #ffc000 0%, #b1882c 100%);
 }
 
 .hang-drum__note {
@@ -43,6 +67,8 @@ body {
   margin-left: -25px;
 
   box-shadow: inset 0px 0px 25px -5px rgba(0,0,0,0.39);
+
+  transition: background-color 0.2s ease;
 }
 
 .hang-drum-container {
@@ -52,11 +78,12 @@ body {
 .hang-drum-container label {
   display: block;
   font-weight: bold;
-  padding-bottom: 10px;
+  padding-bottom: 1.5em;
+  font-size: 1.5em;
 }
 
-.hang-drum__note:hover {
-  background-color: rgba(255,255,255,0.6);;
+.hang-drum__note.active {
+  background-color: rgba(255,255,255,0.75);;
 }
 
 .hidden {
