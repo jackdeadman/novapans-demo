@@ -10,7 +10,6 @@ var Drum = (function() {
     var that = this;
 
     notes.forEach(function(note) {
-      console.log(note)
       note.addEventListener('mouseover', function(e) {
         that.play(this.dataset.note);
       });
@@ -19,7 +18,6 @@ var Drum = (function() {
 
   Drum.prototype.play = function(noteString) {
     var audio = this.node.querySelector('[data-note='+noteString+'] audio');
-    console.log(audio);
     audio.currentTime = 0;
     audio.play();
   };
@@ -28,10 +26,8 @@ var Drum = (function() {
     return angle * (Math.PI / 180);
   }
 
-  // Private
   var arrangeNotes = function(node) {
     var startingAngle = toRadians(parseInt(node.dataset.startingAngle));
-    console.log(startingAngle)
     var notes = node.querySelectorAll('.hang-drum__note');
     var angleDelta = 2*Math.PI / (notes.length-1);
     var radius = 110;
@@ -46,7 +42,6 @@ var Drum = (function() {
       var theta = startingAngle + (angleDelta * index);
       var x = Math.round(Math.cos(theta)*radius);
       var y = Math.round(Math.sin(theta)*radius);
-      // console.log(note)
       note.style.transform = "translate("+x+"px, "+y+"px)";
     });
   };
@@ -54,7 +49,7 @@ var Drum = (function() {
   var loadAudio = function(note) {
     var noteString = note.dataset.note;
     var audio = document.createElement('audio');
-    audio.src = 'audio/'+noteString+'.aif';
+    audio.src = 'audio/'+noteString+'.mp3';
     audio.className = 'hidden';
     note.appendChild(audio);
   }

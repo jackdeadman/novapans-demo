@@ -8,15 +8,21 @@ body {
   margin: 0 auto;
   padding: 0;
   list-style: none;
-  background-color: #00afe8;
 
   width: 300px;
   height: 300px;
   border-radius: 50%;
   position: relative;
+}
 
+.hang-drum--blue {
   box-shadow: 0 0 10px #ddd;
-  background:radial-gradient(ellipse at center, #00afe8 0%, #2e7086 100%); /* w3c */
+  background:radial-gradient(ellipse at center, #00afe8 0%, #2e7086 100%);
+}
+
+.hang-drum--yellow {
+  box-shadow: 0 0 10px #ddd;
+  background:radial-gradient(ellipse at center, #00afe8 0%, #2e7086 100%);
 }
 
 .hang-drum__note {
