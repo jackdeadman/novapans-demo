@@ -54,7 +54,7 @@ var Drum = (function() {
   var loadAudio = function(note) {
     var noteString = note.dataset.note;
     var audio = document.createElement('audio');
-    audio.src = '/audio/'+noteString+'.aif';
+    audio.src = 'audio/'+noteString+'.aif';
     audio.className = 'hidden';
     note.appendChild(audio);
   }
