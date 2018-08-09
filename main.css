@@ -75,7 +75,7 @@ body {
   text-align: center;
 }
 
-.hang-drum-container label {
+.hang-drum-container > label {
   display: block;
   font-weight: bold;
   padding-bottom: 1.5em;
@@ -87,6 +87,31 @@ body {
 }
 
 .hidden {
-  display: none;
-  visibility: hidden;
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.drum-controls {
+  padding: 20px;
+}
+
+.drum-controls .time {
+  font-style: italic;
+  padding: 0 10px;
+}
+
+.drum-controls label {
+  font-weight: bold;
+}
+
+.drum-controls i {
+  padding: 0 4px;
+  font-size: 2em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.drum-controls i:hover {
+  color: #333;
+  transform: scale(1.1);
 }
