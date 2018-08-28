@@ -38,6 +38,12 @@ var Drum = (function() {
     audio.play();
   };
 
+  Drum.prototype.dummyPlay = function(noteString) {
+    var note = this.node.querySelector('[data-note='+noteString+']');
+    dummyPlayStart(note);
+    setTimeout(function() { dummyPlayStop(note) }, 2500);
+  }
+
   // Private methods
   // ==============================================
   var toRadians = function(angle) {
@@ -76,6 +82,7 @@ var Drum = (function() {
     audio.addEventListener('ended', handlers.stopHandler);
   };
 
+
   var getAudioFileName = function(note, node) {
     var data = node.dataset;
     var note = note.dataset.note;
@@ -85,6 +92,14 @@ var Drum = (function() {
   var handlers = {
     playHandler: function(e) { e.target.parentNode.classList.add('active') },
     stopHandler: function(e) { e.target.parentNode.classList.remove('active') }
+  };
+
+  var dummyPlayStart = function(node) {
+    handlers.playHandler({ target: { parentNode: node } });
+  };
+
+  var dummyPlayStop = function(node) {
+    handlers.stopHandler({ target: { parentNode: node } });
   };
 
   return Drum;
@@ -157,7 +172,8 @@ var Player = (function() {
 
         lines.forEach(function(line) {
           if (line[1] === time) {
-            that.drum.play(line[0]);
+            that.drum.dummyPlay(line[0]);
+            // that.drum.play(line[0]);
           }
         });
 
