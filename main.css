@@ -84,7 +84,7 @@ body {
 }
 
 .hang-drum-container .hang-drum {
-  transform: scale(0.5);
+  transform: scale(0.75);
 }
 
 .hang-drum-container--full .hang-drum {
