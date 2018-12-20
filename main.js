@@ -172,8 +172,7 @@ var Player = (function() {
 
         lines.forEach(function(line) {
           if (line[1] === time) {
-            that.drum.dummyPlay(line[0]);
-            // that.drum.play(line[0]);
+            that.drum.play(line[0]);
           }
         });
 
