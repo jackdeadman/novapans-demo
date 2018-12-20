@@ -172,8 +172,7 @@ var Player = (function() {
 
         lines.forEach(function(line) {
           if (line[1] === time) {
-            that.drum.dummyPlay(line[0]);
-            // that.drum.play(line[0]);
+            that.drum.play(line[0]);
           }
         });
 
@@ -227,7 +226,10 @@ var drums = (function() {
 
   var selectors = {
     drum: '.hang-drum',
-    controls: '.hang-drum-container__player'
+    controls: '.hang-drum-container__player',
+    drums: '.drums',
+    'close-button': '.background .close-button',
+    message: '.hang-drum-container__message'
   };
 
   var drumNodes = document.querySelectorAll(selectors.drum);
@@ -240,9 +242,28 @@ var drums = (function() {
     var controlNodes = drumNode.parentNode.querySelectorAll(selectors.controls);
     controlNodes.forEach(function(controlNode) {
       var control = new Player(controlNode, drum);
-      console.log(controlNode)
     });
   });
+
+  var drumsNode = document.querySelector(selectors.drums);
+  function close() {
+    var opened = drumsNode.querySelector('.hang-drum-container--full');
+    opened.classList.remove('hang-drum-container--full');
+    drumsNode.classList.remove('drums--opened')
+  }
+
+  function open(node) {
+    node.classList.add('hang-drum-container--full');
+    drumsNode.classList.add('drums--opened');
+  }
+
+  document.querySelector(selectors['close-button']).addEventListener('click', close);
+
+  document.querySelectorAll(selectors.message).forEach(function(node) {
+    node.addEventListener('click', function() {
+      open(this.parentNode)
+    });
+  })
 
   return drums;
 

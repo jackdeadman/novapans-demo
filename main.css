@@ -5,10 +5,86 @@ body {
   margin: 0;
 }
 
+.drums {
+  margin: 0 200px;
+  position: relative;
+}
 
+.drums .background {
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
 
 .hang-drum-container {
   padding: 40px 0;
+  width: 50%;
+  float: left;
+  position: relative;
+}
+
+.hang-drum-container:not(.hang-drum-container--full):hover .hang-drum-container__message {
+  display: block;
+}
+
+.hang-drum-container__message {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  height: 100%;
+  font-size: 3em;
+  text-align: center;
+  line-height: 400px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.drums--opened .background {
+  display: block;
+}
+
+.background .close-button {
+  position: absolute;
+  right: 10px;
+  font-size: 10em;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.background .close-button:hover {
+  color: #000;
+}
+
+.drums::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.hang-drum-container__player {
+  display: none;
+}
+
+.hang-drum-container--full {
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%);
+  clear: both;
+  display: block;
+  float: none;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.hang-drum-container--full .hang-drum-container__player {
+  display: block;
 }
 
 .hang-drum-container--blue {
@@ -55,6 +131,7 @@ body {
 .hang-drum--purple {
   background:radial-gradient(ellipse at center, #6f2fa0 0%, #50187b 100%);
 }
+
 
 
 .hang-drum__note {
