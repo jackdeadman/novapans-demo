@@ -9,8 +9,12 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 <body>
-  <div class="drums">
-    <div class="hang-drum-container hang-drum-container--blue">
+  <div class="drums drums--opened">
+    <div class="background">
+      <i class="fas fa-times close-button"></i>
+    </div>
+    <div class="hang-drum-container hang-drum-container--blue hang-drum-container--full">
+      <div class="hang-drum-container__message"></div>
       <label for="hang-drum">9 Note in D Minor (Pentatonic)</label>
       <ul class="hang-drum hang-drum--blue"
             data-file-location="audio/9"
@@ -45,6 +49,7 @@
     </div>
 
     <div class="hang-drum-container hang-drum-container--purple">
+      <div class="hang-drum-container__message"></div>
       <label for="hang-drum">9 Note in D Minor (Celtic)</label>
       <ul class="hang-drum hang-drum--purple"
             data-file-location="audio/9-celtic"
@@ -80,10 +85,11 @@
 
 
     <div class="hang-drum-container hang-drum-container--orange">
+      <div class="hang-drum-container__message"></div>
       <label for="hang-drum">8 Note in F Minor (Akebono)</label>
       <ul class="hang-drum hang-drum--orange"
             data-file-location="audio/8"
-            data-starting-angle="240"
+            data-starting-angle="245"
             data-extension="mp3">
         <li class="hang-drum__note" data-note="F3">F3</li>
         <li class="hang-drum__note" data-note="Bb4">Bb4</li>
@@ -112,6 +118,7 @@
     </div>
 
     <div class="hang-drum-container hang-drum-container--yellow">
+      <div class="hang-drum-container__message"></div>
       <label for="hang-drum">7 Note in G Minor (Phyrgian)</label>
       <ul class="hang-drum hang-drum--yellow"
             data-file-location="audio/7"
