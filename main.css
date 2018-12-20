@@ -83,6 +83,14 @@ body {
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
 }
 
+.hang-drum-container .hang-drum {
+  transform: scale(0.5);
+}
+
+.hang-drum-container--full .hang-drum {
+  transform: none;
+}
+
 .hang-drum-container--full .hang-drum-container__player {
   display: block;
 }
