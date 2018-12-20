@@ -48,6 +48,7 @@ body {
 }
 
 .background .close-button {
+  z-index: 4000;
   position: absolute;
   right: 10px;
   font-size: 10em;
@@ -72,7 +73,7 @@ body {
 
 .hang-drum-container--full {
   position: absolute;
-  width: 50%;
+  width: 70%;
   left: 50%;
   z-index: 100;
   transform: translate(-50%);
