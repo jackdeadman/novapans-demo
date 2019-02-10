@@ -255,6 +255,7 @@ var drums = (function() {
   function open(node) {
     node.classList.add('hang-drum-container--full');
     drumsNode.classList.add('drums--opened');
+    node.scrollIntoView();
   }
 
   document.querySelector(selectors['close-button']).addEventListener('click', close);
