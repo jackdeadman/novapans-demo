@@ -25,6 +25,14 @@ body {
   position: relative;
 }
 
+@media only screen and (max-width: 800px) {
+  .hang-drum-container {
+    width: 100%;
+    clear: none;
+  }
+}
+
+
 .hang-drum-container:not(.hang-drum-container--full):hover .hang-drum-container__message {
   display: block;
 }
