@@ -3,6 +3,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
+  height: 10000px;
 }
 
 .drums {
@@ -29,11 +30,12 @@ body {
   .hang-drum-container {
     width: 100%;
     clear: none;
-    position: fixed;
   }
-
+  
   .hang-drum-container.hang-drum-container--full {
     width: 100%;
+    position: fixed;
+    margin-top: 100px;
   }
 }
 
