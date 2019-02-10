@@ -29,6 +29,7 @@ body {
   .hang-drum-container {
     width: 100%;
     clear: none;
+    position: fixed;
   }
 
   .hang-drum-container.hang-drum-container--full {
