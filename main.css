@@ -12,7 +12,7 @@ body {
 .drums .background {
   z-index: 50;
   background-color: rgba(255, 255, 255, 0.9);
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   display: none;
@@ -29,6 +29,10 @@ body {
   .hang-drum-container {
     width: 100%;
     clear: none;
+  }
+
+  .hang-drum-container.hang-drum-container--full {
+    width: 100%;
   }
 }
 
@@ -132,6 +136,14 @@ body {
   box-shadow: 0 0 10px 5px #ccc;
 }
 
+@media only screen and (max-width: 400px) {
+  .hang-drum {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+
 .hang-drum--blue {
   background:radial-gradient(ellipse at center, #00afe8 0%, #2e7086 100%);
 }
@@ -174,6 +186,10 @@ body {
 
 .hang-drum-container {
   text-align: center;
+}
+
+.drums--opened .hang-drum-container {
+  position: fixed;
 }
 
 .hang-drum-container > label {
